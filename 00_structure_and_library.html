@@ -7,7 +7,7 @@
     </head>
     <body>
         <div id="app">
-            
+
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script> <!--Vue-->
@@ -17,7 +17,7 @@
             1. 특수 태그 및 기능
                 1) <router-link to="URL 값">
                     페이지 이동 태그. 화면에서는 <a>로 표시됨
-            
+
                 2) <router-view>
                     페이지 표시 태그. 변경되는 URL에 따라 해당 컴포넌트를 뿌려주는 영역
 
@@ -34,7 +34,7 @@
                 - router property 설정
                 - el property 설정 없이 .$mount('$el') API로 라우터 추가 및 인스턴스를 화면에 연결
         -->
-        
+
         <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>
         <!--
             Vue Resource Library
@@ -51,7 +51,7 @@
 
             1. HTTP GET 요청
                 axios.get('URL 주소').then().catch();
-                
+
                 // URL 주소에 대하여 GET 요청을 보냄
                 // 서버에서 보낸 데이터를 정상적으로 받아오면 then() 안의 로직이 실행
                 // 데이터를 받아올 때 오류가 생기면 catch() 안의 로직이 실행
@@ -73,9 +73,32 @@
                 // HTTP 요청에 대한 자세한 속성들을 직접 정의하여 보낼 수 있음
                 // URL, HTTP 요청방식, 보내는 데이터 유형 등등
         -->
-        
+
         <script>
-            
+            Vue.component('component_name', {
+              template: 'template_value'
+            });
+
+            new Vue{ // Pre-defined properties in Vue instance
+              // Basical Properties
+              el: // 뷰로 만든 화면이 그려지는 시작점, 뷰 인스턴스를 렌더링할 때 화면이 그려질 위치의 DOM 요소를 지정하는 property
+              data: // 각종 데이터를 위한 property
+              template: // 화면에 표시할 HTML, CSS 등의 마크업 요소를 정의하는 property (DOM 요소들과 연관)
+              methods: // 화면 로직 제어와 관련된 메서드를 정의하는 property
+
+              // Life-Cycle Properties
+              beforeCreate:
+              created: // 뷰 인스턴스가 생성되자마자 실행할 로직을 정의할 수 있는 property
+              beforeMount:
+              mounted:
+              beforeUpdate:
+              updated:
+              beforeDestroy:
+              destroyed:
+
+              // Local Component
+              components: // 객체 value - template property(component_name : component_content) 가지고 있음
+            }
         </script>
     </body>
 </html>
