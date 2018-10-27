@@ -75,30 +75,35 @@
         -->
 
         <script>
-            Vue.component('component_name', {
-              template: 'template_value'
-            });
+            new Vue({
+              // Vue instance 기본적인 properties
+              el: ,// 뷰로 만든 화면이 그려지는 시작점, 뷰 인스턴스를 렌더링할 때 화면이 그려질 위치의 돔 요소를 지정
+              data: {
+                // 데이터의 property들 객체로 나열
+              },
+              computed: { // data의 property들을 자동으로 계산해주는 property
 
-            new Vue{ // Pre-defined properties in Vue instance
-              // Basical Properties
-              el: // 뷰로 만든 화면이 그려지는 시작점, 뷰 인스턴스를 렌더링할 때 화면이 그려질 위치의 DOM 요소를 지정하는 property
-              data: // 각종 데이터를 위한 property
-              template: // 화면에 표시할 HTML, CSS 등의 마크업 요소를 정의하는 property (DOM 요소들과 연관)
-              methods: // 화면 로직 제어와 관련된 메서드를 정의하는 property
+              },
+              template: { // 화면에 표시할 HTML, CSS등의 마크업 요소를 정의하는 property (DOM요소들)
 
-              // Life-Cycle Properties
-              beforeCreate:
-              created: // 뷰 인스턴스가 생성되자마자 실행할 로직을 정의할 수 있는 property
-              beforeMount:
-              mounted:
-              beforeUpdate:
-              updated:
-              beforeDestroy:
+              },
+              methods: { // 화면 로직 제어와 관련된 메서드를 정의한 property
+
+              },
+              components: { // 지역 컴포넌트에 관련된 property
+                // template properties 를 가지고 있음
+              },
+
+              // Life Cycle 관련 properties
+              beforeCreate: ,
+              created: ,
+              beforeMount: ,
+              mounted: ,
+              beforeUpdate: ,
+              updated: ,
+              beforeDestroy: ,
               destroyed:
-
-              // Local Component
-              components: // 객체 value - template property(component_name : component_content) 가지고 있음
-            }
+            })/*.$mount($el); 뷰 인스턴스에 el 속성이 존재하지 않는다면, 사용하는 메서드 */;
         </script>
     </body>
 </html>
