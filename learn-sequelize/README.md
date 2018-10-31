@@ -7,3 +7,6 @@
 * ./models - Sequelize 쿼리
 * ./routes - Sequelize 요청
 * ./app.js - Sequelize 연결
+
+교재의 route는 기본 promise 방식을 사용했는데 <br>
+여기에 올려둔 코드는 promise 방식을 async/await로 수정해서 올림 <br>
